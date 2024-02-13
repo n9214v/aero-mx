@@ -1,0 +1,25 @@
+{% extends 'base/template/standard/template.html' %}
+{% load base_taglib %}
+
+{%block title%}Aero-MX Homepage{%endblock%}
+
+{% block main_content %}
+    <h1>Welcome</h1>
+
+    I guess it's working...
+    <br />
+    {%if is_logged_in%}
+        {%fa fas fa-user%} {{user_instance.email}}<br />
+        <br />
+        <div class="profile_thumbnail">
+            <img src="{{avatar_url}}"  />
+        </div>
+    {%else%}
+        {%fa fas fa-user-secret%} Anonymous
+    {%endif%}
+    <br />
+
+
+    <a href="{%url 'socialaccount_connections'%}">socialaccount_connections</a>
+
+{%endblock%}
