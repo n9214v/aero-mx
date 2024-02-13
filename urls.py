@@ -14,12 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from aero_mx import views as aero_views
+from django.urls import path, include, re_path
+from aero_mx.views import general_views, hangar_views
+
+general_paths = [
+    path('', general_views.home, name='home'),
+]
+
+hangar_paths = [
+    path('', hangar_views.home, name='home'),
+]
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
-    path('base/', include(('mjg_base.urls', 'mjg_base'), namespace='base')),
-    path('', aero_views.home, name='home')
+    re_path('^admin/', admin.site.urls),
+    re_path('^accounts/', include('allauth.urls')),
+    re_path('^base/', include(('mjg_base.urls', 'mjg_base'), namespace='base')),
+    re_path('^hangar/', include((hangar_paths, 'aero_mx'), namespace='hangar')),
+    re_path('', include((general_paths, 'aero_mx'), namespace='aero')),
 ]

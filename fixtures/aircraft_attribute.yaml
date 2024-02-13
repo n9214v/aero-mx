@@ -1,0 +1,48 @@
+- model: aero_mx.AircraftAttribute
+  pk: 1
+  fields:
+    title: Single Engine
+    category: 1
+    reviewed: Y
+- model: aero_mx.AircraftAttribute
+  pk: 2
+  fields:
+    title: Multi-Engine
+    category: 1
+    reviewed: Y
+- model: aero_mx.AircraftAttribute
+  pk: 3
+  fields:
+    title: Seaplane
+    category: 1
+    reviewed: Y
+- model: aero_mx.AircraftAttribute
+  pk: 4
+  fields:
+    title: Amphibious
+    category: 1
+    reviewed: Y
+- model: aero_mx.AircraftAttribute
+  pk: 5
+  fields:
+    title: Tailwheel
+    category: 1
+    reviewed: Y
+- model: aero_mx.AircraftAttribute
+  pk: 6
+  fields:
+    title: Tricycle Gear
+    category: 1
+    reviewed: Y
+- model: aero_mx.AircraftAttribute
+  pk: 7
+  fields:
+    title: Retractable Gear
+    category: 1
+    reviewed: Y
+- model: aero_mx.AircraftAttribute
+  pk: 8
+  fields:
+    title: Constant Speed Propeller
+    category: 1
+    reviewed: Y

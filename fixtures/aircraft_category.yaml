@@ -1,0 +1,16 @@
+- model: aero_mx.AircraftCategory
+  pk: 1
+  fields:
+    title: Airplane
+- model: aero_mx.AircraftCategory
+  pk: 2
+  fields:
+    title: Rotorcraft
+- model: aero_mx.AircraftCategory
+  pk: 3
+  fields:
+    title: Glider
+- model: aero_mx.AircraftCategory
+  pk: 4
+  fields:
+    title: Lighter Than Air
