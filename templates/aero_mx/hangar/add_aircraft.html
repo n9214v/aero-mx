@@ -1,0 +1,17 @@
+{% extends 'base/template/standard/template.html' %}
+{% load base_taglib %}
+
+{%block title%}Aero-MX: Add Aircraft{%endblock%}
+
+{% block main_content %}
+    <h1>{%fa fal fa-plane%} Add Aircraft</h1>
+    <form method="post" action="{%url 'hangar:add_aircraft'%}">
+        {%csrf_token%}
+
+        {%select_menu options=categories name="category"%}
+
+
+    </form>
+
+
+{%endblock%}

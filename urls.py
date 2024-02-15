@@ -23,6 +23,8 @@ general_paths = [
 
 hangar_paths = [
     path('', hangar_views.home, name='home'),
+    path('aircraft/add', hangar_views.add_aircraft, name='add_aircraft'),
+
 ]
 
 urlpatterns = [

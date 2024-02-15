@@ -94,7 +94,7 @@ SOCIALACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'base:post_login_handler'
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_PRESERVE_USERNAME_CASING = False
@@ -291,7 +291,7 @@ else:
                 'level': 'ERROR',
                 'propagate': False,
             },
-            'aero_mx': {
+            'base': {
                 'handlers': ['console', 'file'],
                 'level': 'DEBUG',
             },

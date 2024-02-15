@@ -16,6 +16,9 @@ class Hangar(models.Model):
         User, models.CASCADE, related_name="hangar", blank=False, null=False, unique=True, db_index=True
     )
 
+    def aircraft(self):
+        self.aircraft_set.all().order_by('year')
+
     @classmethod
     def get_by_user(cls, user):
         try:
