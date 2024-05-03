@@ -83,7 +83,7 @@ coverage.xml
 
 # Django stuff:
 *.log
-dual_credit/local_settings.py
+local_settings.py
 *.sqlite3
 *.key
 
